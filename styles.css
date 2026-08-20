@@ -1,0 +1,171 @@
+body {
+    display: flex;
+    background-color: #0d192b;
+    color: #fff;
+    font-family: "Outfit", "sans-serif";
+    font-size: 18px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0.5rem 0px 0px;
+}
+
+.icon {
+    height: 1rem;
+    width: auto;
+}
+
+.big-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    anchor-name: --my-anchor;
+}
+
+.pfp {
+    height: 2rem;
+    width: auto;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0px;
+}
+
+.card {
+    background-color: #14253d;
+    box-shadow: 0px 0px 20px #00000047;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    padding: 1.5rem;
+    border-radius: 18px;
+    margin:12px;
+}
+
+.down {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #8bacda;
+    height: fit-content;
+    width: 100%;
+    margin: 0.5rem 0px 0.5rem;
+}
+
+.details {
+    word-wrap: break-word;
+    color: #8bacda;
+    margin: 1rem 0px 1rem;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    gap: 0.5rem;
+    color: #00fff7;
+    margin: 0px;
+    align-items: center;
+}
+
+.line {
+    height: 1px;
+    background-color: oklch(37.189% 0.05071 257.547);
+    margin: 1rem;
+}
+
+.time {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin: 0px;
+    align-items: center;
+    height: fit-content;
+}
+
+.time p,
+.price p,
+.attr p,
+.username {
+    margin: 0px;
+}
+
+.attr {
+    display: flex;
+    color: #8bacda;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    margin: 0px;
+    height: fit-content;
+    font-size: 0.8rem;
+}
+
+.username {
+    color: #fff;
+}
+
+.attribution {
+    margin-top: 1rem;
+    color: #8bacda;
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color:#8bacda7d
+}
+
+/*states*/
+.card h1:hover,
+.attribution a:hover,
+.username:hover {
+    color: #00fff7;
+    cursor: pointer;
+}
+
+.hovered-image {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #00fff79d;
+    position: absolute;
+    position-anchor: --my-anchor;
+    position-area: center;
+    aspect-ratio: 1;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.hovered-image img {
+    height: auto;
+    width: 45px;
+}
+
+.big-image:hover ~ .hovered-image,
+.hovered-image:hover {
+    display: flex;
+}
+
+@media only screen and (width <= 440px) {
+    body {
+        font-size: 14px;
+    }
+
+    .card {
+        width: auto;
+    }
+}
+@media only screen and (width <= 255px){
+    h1 {
+        word-break: break-all;
+    }
+    .down {
+        font-size: 0.5rem;
+    }
+}
